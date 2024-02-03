@@ -1,10 +1,10 @@
 import express from 'express'
-import { signup } from '../contollers/auth.controller.js';
-import { signin,google } from '../contollers/auth.controller.js';
+import { signin, signup, google, signout } from '../contollers/auth.controller.js';
 
 const router=express();
 
 router.post("/signup",signup)
 router.post("/signin",signin)
 router.post("/google",google)
+router.get('/signout', signout);
 export default router;
